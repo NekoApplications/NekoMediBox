@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">猫猫药盒</string>
+    <string name="text_nfc_failure">Nfc Failure</string>
+    <string name="text_exit_app">Exit App</string>
+    <string name="text_nfc_state_error">Illegal Nfc State: %s</string>
+    <string name="text_tag_not_supported">Tag (%s) Not Supported</string>
+    <string name="text_new_tag">Found Tag: %s</string>
+</resources>

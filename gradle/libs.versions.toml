@@ -1,0 +1,46 @@
+[versions]
+activity-compose = "1.8.2"
+agp = "8.3.0-alpha14"
+androidx-navigation-fragment-ktx = "2.7.7"
+androidx-navigation-ui-ktx = "2.7.7"
+fragment-ktx = "1.6.2"
+kotlin = "1.9.0"
+core-ktx = "1.12.0"
+junit = "4.13.2"
+appcompat = "1.6.1"
+lifecycle-runtime-ktx = "2.7.0"
+material = "1.11.0"
+constraintlayout = "2.1.4"
+navigation-fragment-ktx = "2.7.7"
+navigation-ui-ktx = "2.7.7"
+preference-ktx = "1.2.1"
+swiperefreshlayout = "1.1.0"
+utilcodex = "1.31.0"
+gson = "2.10.1"
+activity = "1.8.2"
+
+[libraries]
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity-compose" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment-ktx" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle-runtime-ktx" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle-runtime-ktx" }
+androidx-navigation-fragment-ktx-v273 = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidx-navigation-fragment-ktx" }
+androidx-navigation-ui-ktx-v273 = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidx-navigation-ui-ktx" }
+androidx-preference-ktx = { module = "androidx.preference:preference-ktx", version.ref = "preference-ktx" }
+androidx-swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefreshlayout" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation-fragment-ktx" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation-ui-ktx" }
+utilcodex = { module = "com.blankj:utilcodex", version.ref = "utilcodex" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
