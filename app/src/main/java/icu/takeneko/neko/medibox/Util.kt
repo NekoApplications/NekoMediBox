@@ -9,6 +9,8 @@ import com.blankj.utilcode.util.ToastUtils
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.plus
+import java.io.ByteArrayOutputStream
+import java.nio.ByteBuffer
 
 @OptIn(ExperimentalStdlibApi::class)
 fun hexView(byteArray: ByteArray): String =
@@ -45,4 +47,21 @@ fun logI(content:String){
 
 fun logW(content:String){
     Log.w(TAG, content)
+}
+
+fun ByteArrayOutputStream.writeInt(value:Int){
+    val buf = ByteBuffer.wrap(ByteArray(Int.SIZE_BYTES))
+    buf.putInt(value)
+    this.write(buf.array())
+}
+
+fun ByteBuffer.getString(): String {
+    val length = getInt()
+    val array = ByteArray(length)
+    val pos = position()
+    var index = 0
+    for (i in pos until pos + length) {
+        array[index++] = this.get()
+    }
+    return array.decodeToString()
 }
