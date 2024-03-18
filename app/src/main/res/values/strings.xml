@@ -6,4 +6,10 @@
     <string name="text_nfc_state_error">Illegal Nfc State: %s</string>
     <string name="text_tag_not_supported">Tag (%s) Not Supported</string>
     <string name="text_new_tag">Found Tag: %s</string>
+    <string name="label_read_box">Read Medication Box Data</string>
+    <string name="label_new_box">Create New Medication Box Data</string>
+    <string name="label_modify_box">Modify Medication Box Data</string>
+    <string name="label_with_heart_and_fishcake" translatable="false">"with ❤️ and 🍥"</string>
+    <string name="label_powered_by" translatable="false">Powered by</string>
+    <string name="label_medibox">Choose an Option…</string>
 </resources>

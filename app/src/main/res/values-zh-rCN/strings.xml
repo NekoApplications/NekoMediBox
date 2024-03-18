@@ -6,4 +6,8 @@
     <string name="text_nfc_state_error">Illegal Nfc State: %s</string>
     <string name="text_tag_not_supported">Tag (%s) Not Supported</string>
     <string name="text_new_tag">Found Tag: %s</string>
+    <string name="label_read_box">读取</string>
+    <string name="label_modify_box">修改</string>
+    <string name="label_new_box">新建</string>
+    <string name="label_medibox">要对药盒做什么呢？</string>
 </resources>

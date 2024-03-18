@@ -21,6 +21,7 @@ class MainActivity : NfcActivity() {
     }
     private val externalScope: CoroutineScope =
         lifecycleScope + coroutineExceptionHandler
+    private var readTag = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +30,7 @@ class MainActivity : NfcActivity() {
     }
 
     override fun onNewTag(tag: NfcTag) {
+        if (!readTag)return
         Toast.makeText(
             this,
             format(
