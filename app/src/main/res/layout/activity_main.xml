@@ -45,6 +45,7 @@
 
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_read"
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -58,6 +59,7 @@
             app:iconSize="24dp" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_create"
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -71,6 +73,7 @@
             app:iconSize="24dp" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_modify"
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -83,7 +86,7 @@
             app:iconSize="24dp" />
 
         <LinearLayout
-            android:id="@+id/text_powered_by"
+            android:id="@+id/text_credits"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

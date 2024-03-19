@@ -1,7 +1,9 @@
 package icu.takeneko.neko.medibox.data
 
-enum class UsageType : Identifiable<UsageType> {
-    MILLIGRAM, PILL, HALF_PILL;
+import icu.takeneko.neko.medibox.R
+
+enum class UsageType(val resId:Int) : Identifiable<UsageType> {
+    MILLIGRAM(R.string.text_mg), PILL(R.string.text_one_pill), HALF_PILL(R.string.text_half_pill);
 
     override fun id() = this.ordinal
     override fun match(id:Int): UsageType {

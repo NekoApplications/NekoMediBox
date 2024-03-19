@@ -1,7 +1,7 @@
 package icu.takeneko.neko.medibox.data
 
-import icu.takeneko.neko.medibox.getString
-import icu.takeneko.neko.medibox.writeInt
+import icu.takeneko.neko.medibox.util.getString
+import icu.takeneko.neko.medibox.util.writeInt
 import java.io.ByteArrayOutputStream
 import java.nio.ByteBuffer
 

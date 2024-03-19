@@ -12,4 +12,35 @@
     <string name="label_with_heart_and_fishcake" translatable="false">"with ❤️ and 🍥"</string>
     <string name="label_powered_by" translatable="false">Powered by</string>
     <string name="label_medibox">Choose an Option…</string>
+    <string name="label_participate_part">Participate Part</string>
+    <string name="label_link">Link</string>
+    <string name="label_credits">Credits</string>
+    <string name="text_waiting_for_tag">Waiting For Tag</string>
+    <string name="label_ok">OK</string>
+    <string name="text_nfc_io_error">Nfc I/O Error</string>
+    <string name="text_nfc_tag_lost">Tag Lost</string>
+    <string name="text_reading_tag">Reading MediBox Tag</string>
+    <string name="text_version_mismatch">Data Version Mismatch</string>
+    <string name="text_version_requirement">Require: %d, Actual: %d</string>
+    <string name="text_empty_data">Empty MediBox Data</string>
+    <string name="text_invalid_data">Invalid MediBox Data</string>
+    <string name="text_data_length_mismatch">Data Length Mismatch</string>
+    <string name="text_medicine_not_found">Medicine(s) Not Found\n%s</string>
+    <string name="text_mg" translatable="false">mg</string>
+    <string name="text_one_pill">One Pill</string>
+    <string name="text_half_pill">Half Pill</string>
+    <string name="text_duration_as_necessary">As Necessary</string>
+    <string name="text_once_per_day">Once Per Day</string>
+    <string name="text_twice_per_day">Twice Per Day</string>
+    <string name="text_third_times_per_day">Third Times Per Day</string>
+    <string name="text_quad_times_per_day">Quad Times Per Day</string>
+    <string name="text_every_hour">Every Hour</string>
+    <string name="text_every_2_hour">Every 2 Hour</string>
+    <string name="text_exact_time_before_meals">Before Meals</string>
+    <string name="text_exact_time_after_meals">After Meals</string>
+    <string name="text_exact_time_morning">Morning</string>
+    <string name="text_exact_time_afternoon">Afternoon</string>
+    <string name="text_exact_time_every_night">Every Night</string>
+    <string name="text_exact_time_before_sleep">Before Sleep</string>
+    <string name="text_medicine_not_found_with_usage">Medicine id %d labeled usage as %s was not found in MediBox data</string>
 </resources>

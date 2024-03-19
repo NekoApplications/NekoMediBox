@@ -1,22 +1,37 @@
 package icu.takeneko.neko.medibox.data
 
-import icu.takeneko.neko.medibox.writeInt
+import android.content.Context
+import android.content.SyncRequest
+import icu.takeneko.neko.medibox.util.format
+import icu.takeneko.neko.medibox.util.writeInt
 import java.io.ByteArrayOutputStream
 import java.nio.ByteBuffer
 
 class MedicineUsage(
-    val medicineIndex: Int,
+    val medicineId: Int,
     val usageType: UsageType,
     val count: Int,
     val orderDuration: OrderDuration,
     val orderDurationExactTime: OrderDurationExactTime
 ) {
 
+    fun describeUsage(context: Context):String=buildString {
+        context.run {
+            append(format(usageType.resId)).append(", ").append(format(orderDuration.descriptorStringRes))
+            if (orderDurationExactTime != OrderDurationExactTime.NONE){
+                append(", ")
+                append(format(orderDurationExactTime.descriptorStringRes))
+            }
+        }
+    }
+
+
+
     companion object : BinaryData<MedicineUsage> {
         override fun encode(obj: MedicineUsage): ByteArray {
             val os = ByteArrayOutputStream()
             obj.apply {
-                os.writeInt(medicineIndex)
+                os.writeInt(medicineId)
                 os.writeInt(usageType.id())
                 os.writeInt(count)
                 os.writeInt(orderDuration.id())

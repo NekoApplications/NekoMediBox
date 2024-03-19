@@ -8,9 +8,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import icu.takeneko.neko.medibox.R
-import icu.takeneko.neko.medibox.format
+import icu.takeneko.neko.medibox.util.AppActivity
+import icu.takeneko.neko.medibox.util.format
 
-open class NfcActivity: AppCompatActivity() {
+open class NfcActivity: AppActivity() {
 
     protected lateinit var nfcService:NfcService
 

@@ -3,7 +3,7 @@ package icu.takeneko.neko.medibox.nfc
 import android.nfc.Tag
 import android.nfc.tech.MifareClassic
 import android.nfc.tech.NfcA
-import icu.takeneko.neko.medibox.logI
+import icu.takeneko.neko.medibox.util.logI
 
 @OptIn(ExperimentalStdlibApi::class)
 class NfcTag(

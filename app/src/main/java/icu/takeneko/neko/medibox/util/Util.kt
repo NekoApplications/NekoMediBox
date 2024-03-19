@@ -1,14 +1,9 @@
-package icu.takeneko.neko.medibox
+package icu.takeneko.neko.medibox.util
 
 import android.content.Context
 import android.util.Log
 import androidx.annotation.StringRes
-import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
-import com.blankj.utilcode.util.ToastUtils
-import kotlinx.coroutines.CoroutineExceptionHandler
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.plus
+import icu.takeneko.neko.medibox.TAG
 import java.io.ByteArrayOutputStream
 import java.nio.ByteBuffer
 
