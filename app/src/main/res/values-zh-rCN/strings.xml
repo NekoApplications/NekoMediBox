@@ -40,4 +40,5 @@
     <string name="text_duration_as_necessary">需要时</string>
     <string name="text_exact_time_after_meals">饭后</string>
     <string name="text_exact_time_afternoon">下午</string>
+    <string name="label_cancel">取消</string>
 </resources>

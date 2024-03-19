@@ -80,7 +80,9 @@ abstract class AppActivity : AppCompatActivity() {
 
     fun showWaitingDialog(
         title: String,
-        message: String? = null
+        message: String? = null,
+        cancellable: Boolean = false,
+        cancellationCallback:DialogInterface.OnClickListener = defaultDialogButtonCallback
     ): AlertDialog {
         currentWaitingDialog?.dismiss()
         val circularProgressIndicator = CircularProgressIndicator(this).apply {
@@ -89,7 +91,10 @@ abstract class AppActivity : AppCompatActivity() {
         }
         return MaterialAlertDialogBuilder(this)
             .setTitle(title)
-            .apply { if (message != null) setMessage(message) }
+            .apply {
+                if (message != null) setMessage(message)
+                if (cancellable) setNegativeButton(R.string.label_cancel, cancellationCallback)
+            }
             .setView(LinearLayout(this).apply {
                 setPadding(10.dp, 10.dp, 10.dp, 25.dp)
                 setLayoutParams(
@@ -107,9 +112,16 @@ abstract class AppActivity : AppCompatActivity() {
 
     fun showWaitingDialog(
         title: Int,
-        message: Int? = null
+        message: Int? = null,
+        cancellable: Boolean = false,
+        cancellationCallback:DialogInterface.OnClickListener = defaultDialogButtonCallback
     ): AlertDialog {
-        return showWaitingDialog(format(title), if (message == null) null else format(message))
+        return showWaitingDialog(
+            format(title),
+            if (message == null) null else format(message),
+            cancellable,
+            cancellationCallback
+        )
     }
 
     private val Int.dp

@@ -53,7 +53,10 @@ class MainActivity : NfcActivity() {
                 intent.putExtra("preview", false)
                 startActivity(intent)
             }
-            showWaitingDialog(R.string.text_waiting_for_tag)
+            showWaitingDialog(R.string.text_waiting_for_tag, cancellable = true) {_,_ ->
+                readTag = false
+                currentWaitingDialog?.dismiss()
+            }
             readTag = true
         }
         binding.buttonCreate.setOnClickListener {
@@ -66,7 +69,10 @@ class MainActivity : NfcActivity() {
                 currentMediBox = it
                 ActivityUtils.startActivity(EditMediBoxActivity::class.java)
             }
-            showWaitingDialog(R.string.text_waiting_for_tag)
+            showWaitingDialog(R.string.text_waiting_for_tag, cancellable = true) {_,_ ->
+                readTag = false
+                currentWaitingDialog?.dismiss()
+            }
             readTag = true
         }
         setContentView(binding.root)

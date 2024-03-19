@@ -43,4 +43,5 @@
     <string name="text_exact_time_every_night">Every Night</string>
     <string name="text_exact_time_before_sleep">Before Sleep</string>
     <string name="text_medicine_not_found_with_usage">Medicine id %d labeled usage as %s was not found in MediBox data</string>
+    <string name="label_cancel">Cancel</string>
 </resources>
