@@ -4,10 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".view.MedicineUsageItemView"
+    tools:context=".view.MedicineUsageView"
+    android:clickable="true"
     >
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/usage_card"
         style="@style/Widget.Material3.CardView.Elevated"
         android:clickable="true"
         android:layout_width="match_parent"
@@ -15,46 +17,59 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_height="wrap_content">
-
-        <LinearLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="?dialogPreferredPadding">
-
+            android:layout_height="match_parent">
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:paddingBottom="24dp"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_pill_24"
-                    app:tint="?colorPrimary" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="?dialogPreferredPadding">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="24dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_pill_24"
+                        app:tint="?colorPrimary" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/text_medicine_name"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?textAppearanceTitleLarge"
+                        android:textColor="?colorOnErrorContainer" />
+                </LinearLayout>
                 <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/text_medicine_name"
-                    android:layout_marginStart="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?textAppearanceTitleLarge"
+                    android:textAppearance="?textAppearanceBodyMedium"
+                    android:text="@string/text_medicine_usage"
                     android:textColor="?colorOnErrorContainer" />
-            </LinearLayout>
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?textAppearanceBodyMedium"
-                android:text="@string/text_medicine_usage"
-                android:textColor="?colorOnErrorContainer" />
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/text_medicine_usage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="24dp"
-                android:textAppearance="?textAppearanceTitleMedium"
-                android:textColor="?colorOnErrorContainer" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_medicine_usage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="24dp"
+                    android:textAppearance="?textAppearanceTitleMedium"
+                    android:textColor="?colorOnErrorContainer" />
 
-        </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/button_remove_usage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_delete_24"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="end|center_vertical"/>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
     </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

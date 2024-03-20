@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.window.OnBackInvokedDispatcher
+import com.blankj.utilcode.util.ActivityUtils
+import com.blankj.utilcode.util.ToastUtils
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import icu.takeneko.neko.medibox.R
@@ -38,6 +40,8 @@ class EditMedicinesActivity : AppActivity() {
                 ) { _, _ ->
                     finish()
                 }
+            }else{
+                finish()
             }
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -92,9 +96,18 @@ class EditMedicinesActivity : AppActivity() {
                 .setNegativeButton(R.string.label_cancel) { _, _ -> }
                 .setCancelable(true)
                 .show()
+            textView.requestFocus()
         }
         binding.buttonNextStep.setOnClickListener {
-
+            if (medicines.isEmpty()) {
+                ToastUtils.showLong("¯\\\\_(ツ)_/¯")
+                return@setOnClickListener
+            }
+            currentMediBox = MediBox(
+                medicines.associateBy { it.medicineId },
+                currentMediBox?.usages ?: emptyList()
+            )
+            ActivityUtils.startActivity(EditMedicineUsagesActivity::class.java)
         }
         updateMedicineList()
         setContentView(binding.main)

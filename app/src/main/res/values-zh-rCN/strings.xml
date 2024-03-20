@@ -55,4 +55,12 @@
     <string name="yes">要</string>
     <string name="text_add_medicine">添加药物</string>
     <string name="text_confirm_remove_medicine">把药 %s 扔掉?</string>
+    <string name="text_confirm_remove_medicine_usage">Remove Medicine Usage?</string>
+    <string name="label_medicine">Medicine</string>
+    <string name="label_use_amount">Amount</string>
+    <string name="label_order_duration">Order Duration</string>
+    <string name="label_exact_order_duration">Exact Order Duration</string>
+    <string name="label_done">Done</string>
+    <string name="text_none">None</string>
+    <string name="text_desc_mg">mg</string>
 </resources>

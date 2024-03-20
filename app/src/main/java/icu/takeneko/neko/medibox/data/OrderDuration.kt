@@ -24,7 +24,7 @@ enum class OrderDuration(val countInSingleDay: Int, val descriptorStringRes: Int
 
 enum class OrderDurationExactTime(@StringRes val descriptorStringRes: Int = 0) :
     Identifiable<OrderDurationExactTime> {
-    NONE,
+    NONE(R.string.text_none),
     AC(R.string.text_exact_time_before_meals),
     PC(R.string.text_exact_time_after_meals),
     AM(R.string.text_exact_time_morning),
