@@ -1,6 +1,6 @@
 [versions]
 activity-compose = "1.8.2"
-agp = "8.3.0-alpha14"
+agp = "8.3.0-alpha15"
 androidx-navigation-fragment-ktx = "2.7.7"
 androidx-navigation-ui-ktx = "2.7.7"
 fragment-ktx = "1.6.2"

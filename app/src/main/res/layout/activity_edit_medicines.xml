@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.DisplayMediBoxActivity">
+    tools:context=".activity.EditMedicinesActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -29,14 +29,23 @@
                 android:layout_height="?actionBarSize"
                 android:elevation="0dp"
                 app:layout_collapseMode="pin"
-                app:title="@string/label_medicine_usage"
-
+                app:title="@string/label_medicines"
                 app:navigationIcon="@drawable/ic_arrow_back_24"
                 app:titleMarginStart="16dp" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-
     </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/text_nothing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAppearance="?textAppearanceTitleSmall"
+        android:text="@string/text_nothing_here"
+        android:visibility="visible">
+
+    </TextView>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -54,10 +63,46 @@
             app:borderTopVisibility="whenTop">
 
             <LinearLayout
-                android:id="@+id/med_list"
+                android:id="@+id/medicine_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"/>
         </rikka.widget.borderview.BorderNestedScrollView>
     </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:orientation="horizontal"
+        android:padding="12dp">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_add_medicine"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/ic_add_24"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_next_step"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Primary"
+            app:cornerRadius="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="end|center_horizontal"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/label_next_step"
+            android:insetBottom="0dp"
+            android:insetTop="0dp"
+            android:textAppearance="?textAppearanceBodyLarge"
+            app:iconGravity="end"
+            app:icon="@drawable/ic_arrow_forward_24"/>
+    </LinearLayout>
+
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

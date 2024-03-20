@@ -58,6 +58,8 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.activity)
+    //noinspection UseTomlInstead
+    implementation("dev.rikka.rikkax.widget:borderview:1.1.0")
     implementation(libs.gson)
     testImplementation(libs.junit)
 }

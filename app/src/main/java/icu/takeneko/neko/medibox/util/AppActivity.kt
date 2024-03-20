@@ -17,7 +17,7 @@ abstract class AppActivity : AppCompatActivity() {
 
     fun showQuestionDialog(
         title: String,
-        message: String,
+        message: String? = null,
         negativeButtonText: Int,
         negativeButtonCallback: DialogInterface.OnClickListener = defaultDialogButtonCallback,
         positiveButtonText: Int,
@@ -26,7 +26,7 @@ abstract class AppActivity : AppCompatActivity() {
         currentWaitingDialog?.dismiss()
         return MaterialAlertDialogBuilder(this)
             .setTitle(title)
-            .setMessage(message)
+            .apply { if (message != null) setMessage(message) }
             .setNegativeButton(negativeButtonText, negativeButtonCallback)
             .setPositiveButton(positiveButtonText, positiveButtonCallback)
             .show()
@@ -34,7 +34,7 @@ abstract class AppActivity : AppCompatActivity() {
 
     fun showQuestionDialog(
         title: Int,
-        message: Int,
+        message: Int? = null,
         negativeButtonText: Int,
         negativeButtonCallback: DialogInterface.OnClickListener = defaultDialogButtonCallback,
         positiveButtonText: Int,
@@ -42,7 +42,7 @@ abstract class AppActivity : AppCompatActivity() {
     ): AlertDialog {
         return showQuestionDialog(
             format(title),
-            format(message),
+            if (message == null) null else format(message),
             negativeButtonText,
             negativeButtonCallback,
             positiveButtonText,
@@ -82,12 +82,11 @@ abstract class AppActivity : AppCompatActivity() {
         title: String,
         message: String? = null,
         cancellable: Boolean = false,
-        cancellationCallback:DialogInterface.OnClickListener = defaultDialogButtonCallback
+        cancellationCallback: DialogInterface.OnClickListener = defaultDialogButtonCallback
     ): AlertDialog {
         currentWaitingDialog?.dismiss()
         val circularProgressIndicator = CircularProgressIndicator(this).apply {
             isIndeterminate = true
-            setTheme(R.style.Base_Theme_NekoMediBox)
         }
         return MaterialAlertDialogBuilder(this)
             .setTitle(title)
@@ -114,7 +113,7 @@ abstract class AppActivity : AppCompatActivity() {
         title: Int,
         message: Int? = null,
         cancellable: Boolean = false,
-        cancellationCallback:DialogInterface.OnClickListener = defaultDialogButtonCallback
+        cancellationCallback: DialogInterface.OnClickListener = defaultDialogButtonCallback
     ): AlertDialog {
         return showWaitingDialog(
             format(title),
@@ -124,6 +123,6 @@ abstract class AppActivity : AppCompatActivity() {
         )
     }
 
-    private val Int.dp
+    val Int.dp
         get() = (resources.displayMetrics.density * this + 0.5f).toInt()
 }

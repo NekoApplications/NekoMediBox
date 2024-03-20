@@ -26,7 +26,7 @@
     <string name="text_invalid_data">Invalid MediBox Data</string>
     <string name="text_data_length_mismatch">Data Length Mismatch</string>
     <string name="text_medicine_not_found">Medicine(s) Not Found\n%s</string>
-    <string name="text_mg" translatable="false">mg</string>
+    <string name="text_mg" translatable="false">%d mg</string>
     <string name="text_one_pill">One Pill</string>
     <string name="text_half_pill">Half Pill</string>
     <string name="text_duration_as_necessary">As Necessary</string>
@@ -44,4 +44,18 @@
     <string name="text_exact_time_before_sleep">Before Sleep</string>
     <string name="text_medicine_not_found_with_usage">Medicine id %d labeled usage as %s was not found in MediBox data</string>
     <string name="label_cancel">Cancel</string>
+    <string name="text_medicine_usage">Medicine Usage</string>
+    <string name="text_unknown_medicine">Unknown Medicine (%d)</string>
+    <string name="label_medicine_usage">Medicine Usage</string>
+    <string name="text_rename">Rename…</string>
+    <string name="text_empty_medicine_name">Empty medicine name, keep original name unchanged</string>
+    <string name="label_medicines">Medicines</string>
+    <string name="text_nothing_here">¯\\\\_(ツ)_\/¯\nNothing Here</string>
+    <string name="label_next_step">Next Step</string>
+    <string name="text_confirm_exit">Confirm Exit</string>
+    <string name="empty" />
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="text_add_medicine">Add Medicine</string>
+    <string name="text_confirm_remove_medicine">Remove Medicine %s?</string>
 </resources>

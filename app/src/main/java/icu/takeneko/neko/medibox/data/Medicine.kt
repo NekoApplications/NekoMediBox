@@ -5,7 +5,7 @@ import icu.takeneko.neko.medibox.util.writeInt
 import java.io.ByteArrayOutputStream
 import java.nio.ByteBuffer
 
-class Medicine(val medicineId:Int, val name:String) {
+class Medicine(val medicineId:Int, var name:String) {
 
     companion object : BinaryData<Medicine> {
         override fun encode(obj: Medicine): ByteArray {

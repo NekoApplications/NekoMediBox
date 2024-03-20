@@ -2,6 +2,7 @@ package icu.takeneko.neko.medibox.data
 
 import android.content.Context
 import android.content.SyncRequest
+import icu.takeneko.neko.medibox.currentMediBox
 import icu.takeneko.neko.medibox.util.format
 import icu.takeneko.neko.medibox.util.writeInt
 import java.io.ByteArrayOutputStream
@@ -15,16 +16,16 @@ class MedicineUsage(
     val orderDurationExactTime: OrderDurationExactTime
 ) {
 
-    fun describeUsage(context: Context):String=buildString {
+    fun describeUsage(context: Context): String = buildString {
         context.run {
-            append(format(usageType.resId)).append(", ").append(format(orderDuration.descriptorStringRes))
-            if (orderDurationExactTime != OrderDurationExactTime.NONE){
+            append(format(usageType.resId, count)).append(", ")
+                .append(format(orderDuration.descriptorStringRes))
+            if (orderDurationExactTime != OrderDurationExactTime.NONE) {
                 append(", ")
                 append(format(orderDurationExactTime.descriptorStringRes))
             }
         }
     }
-
 
 
     companion object : BinaryData<MedicineUsage> {
@@ -37,7 +38,6 @@ class MedicineUsage(
                 os.writeInt(orderDuration.id())
                 os.writeInt(orderDurationExactTime.id())
             }
-
             return os.toByteArray()
         }
 
@@ -46,8 +46,15 @@ class MedicineUsage(
             val usageType: UsageType = UsageType.PILL.match(byteBuffer.getInt())
             val count: Int = byteBuffer.getInt()
             val orderDuration: OrderDuration = OrderDuration.PRN.match(byteBuffer.getInt())
-            val orderDurationExactTime: OrderDurationExactTime = OrderDurationExactTime.AM.match(byteBuffer.getInt())
-            return MedicineUsage(medicineIndex, usageType, count, orderDuration, orderDurationExactTime)
+            val orderDurationExactTime: OrderDurationExactTime =
+                OrderDurationExactTime.AM.match(byteBuffer.getInt())
+            return MedicineUsage(
+                medicineIndex,
+                usageType,
+                count,
+                orderDuration,
+                orderDurationExactTime
+            )
         }
     }
 }

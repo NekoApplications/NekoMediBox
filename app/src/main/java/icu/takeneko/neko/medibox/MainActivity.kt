@@ -9,7 +9,7 @@ import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.ToastUtils
 import icu.takeneko.neko.medibox.activity.CreditsActivity
 import icu.takeneko.neko.medibox.activity.DisplayMediBoxActivity
-import icu.takeneko.neko.medibox.activity.EditMediBoxActivity
+import icu.takeneko.neko.medibox.activity.EditMedicinesActivity
 import icu.takeneko.neko.medibox.data.MediBox
 import icu.takeneko.neko.medibox.databinding.ActivityMainBinding
 import icu.takeneko.neko.medibox.nfc.NfcActivity
@@ -61,13 +61,13 @@ class MainActivity : NfcActivity() {
         }
         binding.buttonCreate.setOnClickListener {
             currentMediBox = MediBox(mutableMapOf(), mutableListOf())
-            ActivityUtils.startActivity(EditMediBoxActivity::class.java)
+            ActivityUtils.startActivity(EditMedicinesActivity::class.java)
         }
         binding.buttonModify.setOnClickListener {
             readTagCallback = {
                 readTag = false
                 currentMediBox = it
-                ActivityUtils.startActivity(EditMediBoxActivity::class.java)
+                ActivityUtils.startActivity(EditMedicinesActivity::class.java)
             }
             showWaitingDialog(R.string.text_waiting_for_tag, cancellable = true) {_,_ ->
                 readTag = false

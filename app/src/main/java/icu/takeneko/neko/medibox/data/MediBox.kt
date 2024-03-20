@@ -10,12 +10,15 @@ import java.nio.ByteBuffer
 
 class MediBox(
     val medicines: Map<Int, Medicine> = mutableMapOf(),
-    val usages: List<MedicineUsage> = mutableListOf()
+    val usages: List<MedicineUsage> = mutableListOf(),
+    val iconEmojiChar: Char = Char.MIN_VALUE
 ) {
 
     fun encode(): ByteArray {
         return encode(this)
     }
+
+    fun getMedicineById(id:Int) = medicines[id]
 
     companion object : BinaryData<MediBox> {
         override fun encode(obj: MediBox): ByteArray {

@@ -23,7 +23,7 @@
             android:name=".activity.DisplayMediBoxActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.EditMediBoxActivity"
+            android:name=".activity.EditMedicinesActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

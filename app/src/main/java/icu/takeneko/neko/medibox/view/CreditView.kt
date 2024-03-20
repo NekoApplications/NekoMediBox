@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import com.google.android.material.textview.MaterialTextView
 import icu.takeneko.neko.medibox.R
 import icu.takeneko.neko.medibox.data.CreditItem
+import icu.takeneko.neko.medibox.databinding.CreditViewBinding
 
 class CreditView : LinearLayout {
 

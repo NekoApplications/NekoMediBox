@@ -4,8 +4,10 @@ import android.content.Context
 import android.util.Log
 import androidx.annotation.StringRes
 import icu.takeneko.neko.medibox.TAG
+import icu.takeneko.neko.medibox.data.MedicineUsage
 import java.io.ByteArrayOutputStream
 import java.nio.ByteBuffer
+import java.util.Random
 
 @OptIn(ExperimentalStdlibApi::class)
 fun hexView(byteArray: ByteArray): String =
@@ -59,4 +61,12 @@ fun ByteBuffer.getString(): String {
         array[index++] = this.get()
     }
     return array.decodeToString()
+}
+
+fun List<MedicineUsage>.sortByExactOrderDuration(): List<MedicineUsage>{
+    return sortedBy { it.orderDurationExactTime.ordinal }
+}
+
+fun randomIntId():Int{
+    return kotlin.random.Random(System.nanoTime()).nextInt()
 }

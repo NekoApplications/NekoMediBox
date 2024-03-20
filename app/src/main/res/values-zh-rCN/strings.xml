@@ -15,8 +15,8 @@
     <string name="label_ok">好</string>
     <string name="text_nfc_io_error">Nfc I/O 错误</string>
     <string name="text_nfc_tag_lost">与标签断开连接</string>
-    <string name="text_once_per_day">一日一次</string>
-    <string name="text_twice_per_day">一日两次</string>
+    <string name="text_once_per_day">每日一次</string>
+    <string name="text_twice_per_day">每日两次</string>
     <string name="text_third_times_per_day">每日三次</string>
     <string name="text_quad_times_per_day">每日四次</string>
     <string name="text_every_hour">每小时</string>
@@ -41,4 +41,18 @@
     <string name="text_exact_time_after_meals">饭后</string>
     <string name="text_exact_time_afternoon">下午</string>
     <string name="label_cancel">取消</string>
+    <string name="text_medicine_usage">用药方式</string>
+    <string name="text_unknown_medicine">未知的药物 (%d)</string>
+    <string name="label_medicine_usage">药物用法</string>
+    <string name="text_rename">重命名…</string>
+    <string name="text_empty_medicine_name">输入的药物名称为空，未做任何更改</string>
+    <string name="label_medicines">药物</string>
+    <string name="text_nothing_here">¯\\\\_(ツ)_\/¯\n啥都没有</string>
+    <string name="label_next_step">下一步</string>
+    <string name="text_confirm_exit">要退出嘛</string>
+    <string name="empty" />
+    <string name="no">不要</string>
+    <string name="yes">要</string>
+    <string name="text_add_medicine">添加药物</string>
+    <string name="text_confirm_remove_medicine">把药 %s 扔掉?</string>
 </resources>
