@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.widget.TextView
 import android.window.OnBackInvokedDispatcher
+import com.blankj.utilcode.util.ActivityUtils
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import icu.takeneko.neko.medibox.R
 import icu.takeneko.neko.medibox.currentMediBox
@@ -63,15 +64,7 @@ class EditMedicineUsagesActivity : AppActivity() {
             }
         }
         binding.buttonNextStep.setOnClickListener {
-            MaterialAlertDialogBuilder(this)
-                .setTitle("12345")
-                .setSingleChoiceItems(arrayOf("1","2","3","4","5"), -1){v,i ->
-                    logI(i.toString())
-                }
-                .setPositiveButton(R.string.label_ok){ _, _ ->
-
-                }
-                .show()
+            ActivityUtils.startActivity(WriteTagActivity::class.java)
         }
         usages.addAll(currentMediBox?.usages ?: emptyList())
         updateUsageList()

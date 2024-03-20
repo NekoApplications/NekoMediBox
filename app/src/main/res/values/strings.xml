@@ -66,5 +66,15 @@
     <string name="label_done">Done</string>
     <string name="text_none">None</string>
     <string name="text_desc_mg">mg</string>
-    <string name="text_zero">0</string>
+    <string name="text_zero" translatable="false">0</string>
+    <string name="text_wait">Please Wait...</string>
+    <string name="text_generating_data">Generating Tag Data</string>
+    <string name="text_determining_blocks">Determining Writable Blocks</string>
+    <string name="text_writable_blocks">Writable Blocks: %s</string>
+    <string name="text_write_error">Error occurred while writing data:\n%s</string>
+    <string name="text_write_block">Writing Block %d</string>
+    <string name="text_write_done">Done Writing Data</string>
+    <string name="text_check_block">Checking Block: %d</string>
+    <string name="text_corrupted_data">Data was written, but following blocks cannot pass data integrity check: %s</string>
+    <string name="text_write_success">Data was successfully written</string>
 </resources>

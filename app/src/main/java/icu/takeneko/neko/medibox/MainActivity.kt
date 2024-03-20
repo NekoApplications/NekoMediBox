@@ -76,6 +76,7 @@ class MainActivity : NfcActivity() {
             readTag = true
         }
         setContentView(binding.root)
+        mainActivity = this
     }
 
     override fun onNewTag(tag: NfcTag) {

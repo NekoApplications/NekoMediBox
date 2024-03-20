@@ -1,6 +1,7 @@
 package icu.takeneko.neko.medibox.data
 
 import icu.takeneko.neko.medibox.R
+import icu.takeneko.neko.medibox.mediBoxVersion
 import icu.takeneko.neko.medibox.util.InvalidMediBoxDataException
 import icu.takeneko.neko.medibox.util.writeInt
 import java.io.ByteArrayOutputStream
@@ -23,6 +24,7 @@ class MediBox(
     companion object : BinaryData<MediBox> {
         override fun encode(obj: MediBox): ByteArray {
             val os = ByteArrayOutputStream()
+            os.writeInt(mediBoxVersion)
             os.writeInt(obj.medicines.size)
             obj.medicines.values.forEach {
                 os.write(Medicine.encode(it))

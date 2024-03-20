@@ -15,8 +15,7 @@ class NfcTag(
         get() = tag.id
     private val mifareTag:MifareClassic
     private val nfcATag:NfcA?
-
-
+    var authorizedSector = -1
 
     init {
         logI(
@@ -76,8 +75,21 @@ class NfcTag(
     }
 
     fun readBlock(block: Int): ByteArray {
-        authSector(mifareTag.blockToSector(block))
+        val sector = mifareTag.blockToSector(block)
+        if (authorizedSector != sector) {
+            authSector(sector)
+            authorizedSector = sector
+        }
         return mifareTag.readBlock(block)
+    }
+
+    fun writeBlock(block: Int, data:ByteArray){
+        val sector = mifareTag.blockToSector(block)
+        if (authorizedSector != sector) {
+            authSector(sector)
+            authorizedSector = sector
+        }
+        mifareTag.writeBlock(block, data)
     }
 
     fun readBlocksToByteArray(vararg block: Int): ByteArray {

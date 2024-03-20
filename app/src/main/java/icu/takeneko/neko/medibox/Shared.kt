@@ -17,6 +17,8 @@ val defaultDialogButtonCallback: DialogInterface.OnClickListener =
 
 const val mediBoxVersion = 0x0004
 
+lateinit var mainActivity: MainActivity
+
 val testMediBox = MediBox(
     listOf(
         Medicine(1, "枸橼酸坦度螺酮片"),
