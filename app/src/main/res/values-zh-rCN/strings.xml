@@ -35,8 +35,8 @@
     <string name="text_invalid_data">无效的药盒数据</string>
     <string name="text_data_length_mismatch">数据长度不匹配，数据可能损坏或者读取出错</string>
     <string name="text_medicine_not_found">找不到药物\\n%s</string>
-    <string name="text_one_pill">一片</string>
-    <string name="text_half_pill">半片</string>
+    <string name="text_one_pill">%d x 一片</string>
+    <string name="text_half_pill">%d x 半片</string>
     <string name="text_duration_as_necessary">需要时</string>
     <string name="text_exact_time_after_meals">饭后</string>
     <string name="text_exact_time_afternoon">下午</string>
@@ -73,4 +73,6 @@
     <string name="text_check_block">正在检查块: %d</string>
     <string name="text_corrupted_data">数据已经写入完成，但是以下的块无法通过数据校验: %s</string>
     <string name="text_write_success">数据写入成功！</string>
+    <string name="text_desc_one_pill">一片</string>
+    <string name="text_desc_half_pill">半片</string>
 </resources>

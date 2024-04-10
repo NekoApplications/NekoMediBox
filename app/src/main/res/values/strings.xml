@@ -27,8 +27,8 @@
     <string name="text_data_length_mismatch">Data Length Mismatch</string>
     <string name="text_medicine_not_found">Medicine(s) Not Found\n%s</string>
     <string name="text_mg" translatable="false">%d mg</string>
-    <string name="text_one_pill">One Pill</string>
-    <string name="text_half_pill">Half Pill</string>
+    <string name="text_one_pill">%d x One Pill</string>
+    <string name="text_half_pill">%d x Half Pill</string>
     <string name="text_duration_as_necessary">As Necessary</string>
     <string name="text_once_per_day">Once Per Day</string>
     <string name="text_twice_per_day">Twice Per Day</string>
@@ -77,4 +77,6 @@
     <string name="text_check_block">Checking Block: %d</string>
     <string name="text_corrupted_data">Data was written, but following blocks cannot pass data integrity check: %s</string>
     <string name="text_write_success">Data was successfully written</string>
+    <string name="text_desc_one_pill">One Pill</string>
+    <string name="text_desc_half_pill">Half Pill</string>
 </resources>

@@ -108,37 +108,26 @@
                     android:layout_height="wrap_content"
                     android:text="@string/label_order_duration" />
 
-                <Spinner
-                    android:id="@+id/spinner_order_duration"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:choiceMode="singleChoice" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/spinner_order_duration"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:choiceMode="singleChoice" />
 
-        <com.google.android.material.card.MaterialCardView
-            style="@style/Widget.Material3.CardView.Outlined"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp">
+                    <Spinner
+                        android:id="@+id/spinner_exact_order_duration"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="15dp"
+                        android:choiceMode="singleChoice" />
+                </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="?dialogPreferredPadding">
 
-                <com.google.android.material.textview.MaterialTextView
-                    style="?textAppearanceTitleLarge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_exact_order_duration" />
-
-                <Spinner
-                    android:id="@+id/spinner_exact_order_duration"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:choiceMode="singleChoice" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
